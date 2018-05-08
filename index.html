@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UFO encounters statistics</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/darkly/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <img src='banner.png' style="height: 100px; width: 100%; display: block;">
+</head>
+
+<body>
+  <br>
+  <div class="container">
+      <div class="row">
+        
+      <div class="col-md-6">
+          <div class="alert alert-dismissible alert-secondary">
+            <div class='row'>
+                <div class="form-group">
+                    <select class="custom-select" id='selector_' onchange="getData(this.value)">
+                      <option selected="">What are you looking for?..</option>
+                      <option value="city" >City</option>
+                      <option value="state" >State</option>
+                      <option value="country" >Country</option>
+                      <option value="datetime" >Date</option>
+                      <option value="shape" >Shape</option>
+                    </select>
+                  </div>
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <div class="form-group">
+                  <input type="text" class="form-control" id='search_' placeholder="Search">
+                  <a id="search" class="btn btn-success">Search</a>
+                </div>
+            </div></div>
+      </div>
+  <br>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-active">
+          <thead>
+            <tr>
+              <th>Date of the Encounter</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Shape</th>
+              <th>Duration of Encounter</th>
+              <th>Witness notes</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class="table-active">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+<!--
+<div id="listingTable"></div>
+<a href="javascript:prevPage()" id="btn_prev"><button type="button" class="btn btn-success">Prev</button></a>
+<a href="javascript:nextPage()" id="btn_next"><button type="button" class="btn btn-success">Next</button></a>
+<button type="button" class="btn btn-primary"><span id="page"></span></button> -->
+      
+
+  </div>
+  <script src="data.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
